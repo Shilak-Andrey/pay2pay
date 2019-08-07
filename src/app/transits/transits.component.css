@@ -1,0 +1,122 @@
+.cardForm1, .cardForm2{
+    background: #007E3E;
+    color: #fff; 
+    height: 250px;
+    width: 430px;
+    border-radius: 20px; 
+}
+
+label {
+    font-size: 14px; 
+    display: inline-block; 
+    width: 150px; 
+    text-align: center; 
+    margin-top:10px;
+}
+.main-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contain-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+    flex-wrap: wrap;
+    
+}
+
+.contain-1 > div {
+    margin:50px;
+}
+h2{
+    text-align: center;
+}
+/*Стили инпутов*/
+
+.numInputs, .numInputsTo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.infoInputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.cardForm2{
+    display: flex;   
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activeTo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.firstNumbers{
+    font-size: 30px;
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 5px;
+    border: 2px solid #2dbdb6;
+}
+
+.secondNumbers{
+    font-size: 30px;
+    width: 90px;
+    height: 40px;
+    margin: 0px 0px 0px 5px;
+    border-radius: 10px;
+    border: 2px solid #2dbdb6;
+}
+
+#fio {
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #2dbdb6;
+    width: 210px;
+}
+
+.selects{
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #2dbdb6;
+    width: 60px;
+}
+/*Стили кнопки и инпута суммы*/
+#sum {
+    width: 250px;
+    height: 60px;
+    border: 3px solid silver;
+}
+
+#button-submit{
+    width: 250px;
+    height: 80px;
+    border-radius: 10px;
+    border: 2px solid #2dbdb6;
+    margin-left:60px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input.ng-touched.ng-invalid{
+    border-color: red;
+   }
+

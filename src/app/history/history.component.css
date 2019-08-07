@@ -1,0 +1,14 @@
+.history-table{
+    border: 3px solid silver;
+    width:80%;
+    margin:auto;
+}
+th, td {
+    border: 3px solid silver;
+    text-align: center;
+    font-size: 25px;
+}
+
+button {
+    margin: 5px 5px 5px 5px;
+}

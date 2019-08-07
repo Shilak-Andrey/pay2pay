@@ -1,0 +1,23 @@
+<table class='history-table' >
+    <tr>
+        <th>№</th> 
+        <th>Карта плательщика</th>
+        <th>Карта получателя</th>
+        <th>Сумма</th> 
+        <th>Дата выполнения</th>
+        <th>Действие</th>
+    </tr>
+    <tr *ngFor="let i of transits; let d = index">
+        <td>{{d+1}}</td>
+        <td>{{i.numberCard.firstField + ' **** ' + ' **** ' + i.numberCard.fourthField}}</td>
+        <td>{{i.numberCardto.firstField + ' **** ' + ' **** ' + i.numberCardto.fourthField}}</td>
+        <td>{{i.sumary}}</td>
+        <td>{{i.date}}</td>
+        <td> 
+            <div>
+                <button type='submit' routerLink='/create/' (click)="repeat(i)">Повторить</button>
+                <button type="submit" (click)="remove(i)">Удалить</button>
+            </div>
+        </td>
+    </tr>
+</table>

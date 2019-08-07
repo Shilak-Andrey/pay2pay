@@ -1,0 +1,75 @@
+<form [formGroup]='TransitsForm' (ngSubmit)="onSubmit(); TransitsForm.reset()" #transitsForm='ngForm'>
+    <div class='main-box'>
+        <div class='contain-1'>
+            <div formGroupName='numberCard' class='cardForm1'>
+                <h2>Карта плательщика</h2>
+                <label for='number1'>Номер</label>
+                <div class='numInputs'>
+                    <div class='cardNumber-input1'>
+                        <input type='text' id='number1' class='firstNumbers' placeholder="XXXX" maxlength="4" formControlName='firstField'>
+                    </div>
+                    <div class='cardNumber-input2'>
+                        <input type='text' id='number2' class='firstNumbers' placeholder="XXXX" maxlength="4" formControlName='secondField'>
+                    </div>
+                    <div class='cardNumber-input3'>
+                        <input type='text' id='number3' class='firstNumbers' placeholder="XXXX" maxlength="4" formControlName='thirdField'>
+                    </div>
+                    <div class='cardNumber-input4'>
+                        <input type='text' id='number4' class='firstNumbers' placeholder="XXXX" maxlength="4" formControlName='fourthField'>
+                    </div>
+                </div>
+                <div class='infoInputs'>
+                    <div class='fio-block'>
+                        <label for='fio'>ФИО держателя</label>
+                        <br>
+                        <input type='text' id='fio' formControlName='fio' placeholder='ФИ держателя' style='text-transform:uppercase'>
+                    </div>
+                    <div>
+                        <label for='select'>Активна до</label>
+                        <div class='activeTo'>
+                            <div>
+                                <select id='select' class='selects' formControlName='activeMonth'>
+                                    <option *ngFor="let m of monthList" [value]="m" > {{m}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div>
+                                <select class='selects' id='select1' formControlName='activeYear'>
+                                    <option *ngFor=" let y of yearList" [value]='y'> {{y}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div formGroupName='numberCardto' class='cardForm2'>
+                <div class='box-h2'>
+                    <h2>Карта получателя</h2>
+                </div>
+                <div class='numInputsTo'>
+                    <div class='cardNumber1-input1'>
+                        <input type='text' id='number1' class='secondNumbers' placeholder="XXXX" maxlength="4" formControlName='firstField'>
+                    </div>
+                    <div class='cardNumber1-input1'>
+                        <input type='text' id='number2' class='secondNumbers' placeholder="XXXX" maxlength="4" formControlName='secondField'>
+                    </div>
+                    <div class='cardNumber1-input1'>
+                        <input type='text' id='number3' class='secondNumbers' placeholder="XXXX" maxlength="4" formControlName='thirdField'>
+                    </div>
+                    <div class='cardNumber1-input1'>
+                        <input type='text' id='number4' class='secondNumbers' placeholder="XXXX" maxlength="4" formControlName='fourthField'>
+                    </div>
+                </div>
+                <div style='height: 40px;'></div>
+            </div>
+        </div>
+        <div class='submit'>
+            <div class='input-sumary'>
+                <input type='text' id='sum' placeholder="Сумма" formControlName='sumary'>
+            </div>
+            <button type='submit' id='button-submit' [disabled]="!TransitsForm.valid">Перевести</button>
+        </div>
+    </div>
+</form>
+
